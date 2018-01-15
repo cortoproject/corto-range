@@ -10,7 +10,7 @@ struct rangebase:/
     hi: rangespec
 
 class range:/
-    type: primitive
-    lo: rangespec
-    hi: rangespec
+    type: primitive, const
+    lo: rangespec, const
+    hi: rangespec, const
     int16 construct()
