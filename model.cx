@@ -1,0 +1,16 @@
+// Put objects in corto/lang scope
+in package /corto/lang
+
+struct rangespec:/
+    medium_alert: float64
+    high_alert: float64
+
+struct rangebase:/
+    lo: rangespec
+    hi: rangespec
+
+class range:/
+    type: primitive
+    lo: rangespec
+    hi: rangespec
+    int16 construct()
