@@ -9,7 +9,7 @@ struct rangebase:/
     lo: rangespec
     hi: rangespec
 
-class range:/
+class range: lang/struct, hidden, attr=ATTR_DEFAULT|ATTR_NAMED :/
     type: primitive, const
     lo: rangespec, const
     hi: rangespec, const
