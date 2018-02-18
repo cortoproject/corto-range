@@ -1,5 +1,4 @@
 /* range.h
- *
  * This is the main package file. Include this file in other projects.
  * Only modify inside the header-end and body-end sections.
  */
@@ -7,7 +6,6 @@
 #ifndef CORTO_RANGE_H
 #define CORTO_RANGE_H
 
-#include <corto/corto.h>
 #include <corto/corto.h>
 #include <corto/range/_project.h>
 #include <corto/c/c.h>
@@ -19,6 +17,7 @@
 #include <corto/range/_type.h>
 #include <corto/range/_interface.h>
 #include <corto/range/_load.h>
+#include <corto/range/_binding.h>
 #include <corto/range/c/_api.h>
 
 /* $body() */
