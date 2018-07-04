@@ -1,7 +1,0 @@
-in package test
-
-struct RangeTest:/
-    temperature: range{float64, lo={-50, -100}, hi={50, 100}}
-
-test/suite Range:/
-    void tc_rangeInitialValues()

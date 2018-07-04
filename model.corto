@@ -1,16 +1,20 @@
 // Put objects in corto/lang scope
-in package /corto/lang
+in corto.lang
 
-struct rangespec:/
+struct rangespec {
     medium_alert: float64
     high_alert: float64
+}
 
-struct rangebase:/
+struct rangebase {
     lo: rangespec
     hi: rangespec
+}
 
-class range: lang/struct, hidden, attr=ATTR_DEFAULT|ATTR_NAMED :/
+class range: lang.struct, hidden, attr:ATTR_DEFAULT|ATTR_NAMED {
     type: primitive, const
     lo: rangespec, const
     hi: rangespec, const
-    int16 construct()
+
+    construct() int16
+}
