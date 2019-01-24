@@ -1,11 +1,12 @@
 {
-    "id": "corto/range",
+    "id": "corto.range",
     "type": "package",
     "value": {
         "description": "Extend core with capabilities to specify ranges",
         "author": "Sander Mertens",
-        "version": "1.0.0",
-        "language": "c",
+        "version": "1.0.0"
+    },
+    "corto": {
         "scope": "corto/lang"
     }
 }

@@ -6,19 +6,20 @@
 #ifndef CORTO_RANGE_H
 #define CORTO_RANGE_H
 
-#include <corto/corto.h>
-#include <corto/range/_project.h>
-#include <corto/c/c.h>
+#include "bake_config.h"
+
+#define CORTO_RANGE_ETC ut_locate("corto.range", NULL, UT_LOCATE_ETC)
 
 /* $header() */
 /* Definitions that are required by package headers (native types) go here. */
 /* $end */
 
-#include <corto/range/_type.h>
-#include <corto/range/_interface.h>
-#include <corto/range/_load.h>
-#include <corto/range/_binding.h>
-#include <corto/range/c/_api.h>
+#include "_type.h"
+#include "_interface.h"
+#include "_load.h"
+#include "_binding.h"
+
+#include <corto.range.c>
 
 /* $body() */
 /* Definitions here that need your package headers go here. */

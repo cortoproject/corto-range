@@ -1,13 +1,13 @@
 /* This is a managed file. Do not delete this comment. */
 
-#include <corto/range/range.h>
+#include <corto.range>
 
 int16_t corto_range_construct(
     corto_range this)
 {
     /* Validate if ranges are not overlapping */
     if (this->lo.medium_alert < this->lo.high_alert) {
-        corto_throw(
+        ut_throw(
             "medium_alert (%f) of 'lo' should not be lower than high_alert (%f)",
             this->lo.medium_alert,
             this->lo.high_alert);
@@ -15,7 +15,7 @@ int16_t corto_range_construct(
     }
 
     if (this->hi.medium_alert > this->hi.high_alert) {
-        corto_throw(
+        ut_throw(
             "medium_alert (%f) of 'lo' should not be higher than high_alert (%f)",
             this->hi.medium_alert,
             this->hi.high_alert);
@@ -23,7 +23,7 @@ int16_t corto_range_construct(
     }
 
     if (this->lo.medium_alert > this->hi.medium_alert) {
-        corto_throw(
+        ut_throw(
             "medium_alert (%f) of 'lo' should not be higher than medium_alert of 'hi' (%f)",
             this->lo.medium_alert,
             this->hi.medium_alert);
@@ -46,7 +46,7 @@ int16_t corto_range_construct(
         goto error;
     }
     corto_set_ref(&m_lo->type, corto_rangespec_o);
-    m_lo->_default = corto_asprintf("{%f,%f}", this->lo.medium_alert, this->lo.high_alert);
+    m_lo->_default = ut_asprintf("{%f,%f}", this->lo.medium_alert, this->lo.high_alert);
     if (corto_define(m_lo)) {
         goto error;
     }
@@ -56,7 +56,7 @@ int16_t corto_range_construct(
         goto error;
     }
     corto_set_ref(&m_hi->type, corto_rangespec_o);
-    m_hi->_default = corto_asprintf("{%f,%f}", this->hi.medium_alert, this->hi.high_alert);
+    m_hi->_default = ut_asprintf("{%f,%f}", this->hi.medium_alert, this->hi.high_alert);
     if (corto_define(m_hi)) {
         goto error;
     }
