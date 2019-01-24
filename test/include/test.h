@@ -6,12 +6,12 @@
 #ifndef TEST_H
 #define TEST_H
 
-#include <corto/corto.h>
+#include <corto>
 #include <include/_project.h>
 #include <corto/test/c/c.h>
 #include <corto/range/c/c.h>
 #include <corto/c/c.h>
-#include <corto/test/test.h>
+#include <corto.test>
 #include <corto/range/range.h>
 
 /* $header() */
